@@ -1558,141 +1558,65 @@ footer {
 
 }
 
+/* ================= MOBILE NAVBAR ================= */
 
-/* =========================================================
-   MOBILE
-========================================================= */
+@media (max-width: 768px) {
 
-@media (max-width: 700px) {
-
-    .navbar {
-        height: 65px;
-    }
-
-    .menu-btn {
-        display: block;
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border: none;
+        background: transparent;
+        color: #ffffff;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1001;
     }
 
     .nav-links {
         position: absolute;
-
-        top: 65px;
+        top: 100%;
         left: 0;
-
         width: 100%;
 
-        padding: 20px;
-
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        gap: 0;
 
-        align-items: flex-start;
+        background: #0f172a;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
 
-        background: rgba(7,17,31,0.97);
-
-        border-bottom: 1px solid var(--border);
-
-        transform: translateY(-130%);
+        padding: 15px 0;
 
         opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
 
-        pointer-events: none;
+        transition: all 0.3s ease;
 
-        transition: 0.3s;
+        z-index: 1000;
     }
 
     .nav-links.active {
-        transform: translateY(0);
-
         opacity: 1;
-
-        pointer-events: auto;
+        visibility: visible;
+        transform: translateY(0);
     }
 
-    .hero {
-        padding-top: 110px;
-    }
-
-    .hero h1 {
-        font-size: 43px;
-
-        letter-spacing: -2px;
-    }
-
-    .hero h2 {
-        font-size: 20px;
-    }
-
-    .hero-description {
-        font-size: 14px;
-    }
-
-    .image-wrapper {
-        width: 230px;
-        height: 280px;
-    }
-
-    .floating-card {
-        padding: 9px 11px;
-
-        font-size: 10px;
-    }
-
-    .card-one {
-        left: 0;
-    }
-
-    .card-two {
-        right: 0;
-    }
-
-    .section {
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
-
-    .section-heading {
-        margin-bottom: 40px;
-    }
-
-    .about-image-box {
-        width: 250px;
-        height: 300px;
-    }
-
-    .experience-badge {
-        right: 5px;
-    }
-
-    .about-stats {
-        gap: 25px;
-    }
-
-    .stat strong {
-        font-size: 22px;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .skill-card.wide {
-        grid-column: span 1;
-    }
-
-    .project-content {
-        padding: 22px;
-    }
-
-    .contact-box {
-        padding: 35px 25px;
-    }
-
-    .footer-content {
-        flex-direction: column;
-
+    .nav-links a {
+        width: 100%;
         text-align: center;
+        padding: 14px 20px;
+        display: block;
     }
 
+    .nav-links a:hover {
+        background: rgba(34, 211, 238, 0.08);
+    }
 }
 
 
