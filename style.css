@@ -117,10 +117,24 @@ button {
 .logo {
     display: flex;
     align-items: center;
-    gap: 9px;
+    gap: 10px;
 
     font-size: 21px;
     font-weight: 800;
+}
+
+.logo-img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 9px;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: drop-shadow(0 0 10px rgba(34, 211, 238, 0.35));
+}
+
+.logo:hover .logo-img {
+    transform: scale(1.08) rotate(4deg);
+    filter: drop-shadow(0 0 16px rgba(34, 211, 238, 0.65));
 }
 
 .logo span {
@@ -1439,6 +1453,12 @@ footer {
 
 .footer-content .logo {
     font-size: 15px;
+}
+
+.footer-content .logo-img {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
 }
 
 .footer-content .logo span {
